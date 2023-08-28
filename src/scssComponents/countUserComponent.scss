@@ -1,0 +1,23 @@
+.count-user {
+	&__content{
+		padding: 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		button {
+			color: #616F82;
+		}
+		&_counter{
+			color: white;
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 14px;
+			background-color: #616F82;
+			padding: 0px 4px;
+			border-radius: 9px;
+		}
+	}
+	button{
+
+	}
+}
