@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../scssComponents/countUserComponent.scss'
+import '../../scssComponents/leftSide/countUser.scss'
 
 export function CountUser () {
 	return <div className="count-user">

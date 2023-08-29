@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../scssComponents/searchComponent.scss'
+import '../../scssComponents/leftSide/search.scss'
 
 export function Search() {
 	return <div className='search'>

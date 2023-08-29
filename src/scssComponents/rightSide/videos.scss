@@ -1,0 +1,40 @@
+.videos{
+	background-color: white;
+	flex: 1 1 auto;
+	border-radius: 4px;
+	&__items{
+		margin: 10px;
+	}
+}
+.item{
+	border: 1px solid #CDCDCD;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	&__content{
+		display: flex;
+		padding: 10px;
+		img{
+			border-radius: 2px;
+			padding-right: 10px;
+		}
+		&_about{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		&_title{
+			color: #161718;
+			font-size: 16px;
+		}
+		&_subtitle{
+			display: flex;
+			justify-content: space-between;
+			color: #616F82;
+			
+		}
+		&_date{
+			color: #616F82;
+			
+		}
+	}
+}

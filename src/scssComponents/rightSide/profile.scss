@@ -1,0 +1,26 @@
+.profile{
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 4px;
+	&__about{
+		display: flex;
+	}
+	img {
+		margin: 10px;
+	}
+	&__info{
+		padding-top: 15px;
+	}
+	p{
+		color: #161718;
+	}
+	&__name{
+		font-size: 16px;
+	}
+	&__age {
+		padding-top: 6px;
+		font-size: 12px;
+	}
+	
+}
