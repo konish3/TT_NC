@@ -10,6 +10,12 @@
 	&__item {
 		a{
 			color:#616F82;
+			&:hover{
+				color: #4198C5;
+			}
+			&:active{
+				color: #4198C5;
+			}
 		}
 		font-size: 14px;
 		padding: 0 20px;
@@ -31,4 +37,7 @@
 			margin-right: 20px;
 		}
 	}
+}
+.active{
+	color: #4198C5;
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.scss';
 import { LeftSide } from './components/leftSide/leftSideComponent';
 import { RightSide } from './components/rightSide/rightSide';
@@ -31,7 +30,7 @@ export function App() {
 			<header></header>
 			<div className="container">
 				<LeftSide users={users} />
-				<RightSide users={users}/>
+				<RightSide />
 			</div>
 		</div>
 	);

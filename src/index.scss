@@ -77,13 +77,19 @@ h6 {
 }
 
 .functions {
-		display: flex;
-		margin: 20px 15px 0 0;
-		div{
-			background-color: #161718;
-			width: 4px;
-			height: 4px;
-			border-radius: 50%;
-			margin: 2px;
-		}
+	display: flex;
+	margin: 20px 15px 0 0;
+	div{
+		background-color: #161718;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		margin: 2px;
 	}
+}
+.none{
+	display: none;
+}
+.active{
+	display: block;
+}

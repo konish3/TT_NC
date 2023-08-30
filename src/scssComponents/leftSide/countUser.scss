@@ -1,4 +1,4 @@
-.count-user {
+.count-users {
 	&__content{
 		padding: 15px;
 		display: flex;
@@ -16,8 +16,29 @@
 			padding: 0px 4px;
 			border-radius: 9px;
 		}
-	}
-	button{
-
+		input{
+			border: 1px solid #CDCDCD;
+			border-radius: 4px;
+		}
+		&_checkbox{
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			span{
+				color: #616F82;
+			}
+		}
+		&_buttons{
+			button:first-child{
+				padding-right: 10px;
+			}
+			
+		}
 	}
 }
+.count-checkbox{
+	background-color: #4198C5;
+	min-width: 28px;
+	text-align: center;
+}
+

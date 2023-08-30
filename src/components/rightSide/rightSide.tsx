@@ -1,6 +1,5 @@
-import React from 'react';
-import '../../scssComponents/rightSide/rightSide.scss'
-import { Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import '../../scssComponents/rightSide/rightSide.scss';
 import { Profile } from './profileComponent';
 import { IUser } from '../../App';
 import { Menu } from './menuComponent';
@@ -9,16 +8,31 @@ import { Consultation } from './consultationsComponent';
 import { Videos } from './videoComponent';
 import { Events } from './eventsComponent';
 
-export function RightSide({ users }: { users: IUser[] }) {
+export enum TabNameEnum {
+	NOTE = 'note',
+	CONSULTATION = 'consultation',
+	VIDEOS = 'video',
+	EVENTS = 'events',
+}
+
+function Tab({ name }: { name: TabNameEnum }) {
+	switch (true) {
+		case name === TabNameEnum.CONSULTATION:
+			return <Consultation />;
+		case name === TabNameEnum.VIDEOS:
+			return <Videos />;
+		case name === TabNameEnum.EVENTS:
+			return <Events />;
+		default:
+			return <Notes />
+	}
+}
+
+export function RightSide() {
+	const [tabName, setTabName] = useState<TabNameEnum>(TabNameEnum.NOTE)
 	return <div className="right-side">
 		<Profile />
-		<Menu />
-		<Routes>
-			<Route path='/notes' element={<Notes /> }/>
-			<Route path='/consultations' element={<Consultation />} />
-			<Route path='/videos' element={<Videos />}/>
-			<Route path='/events' element={<Events />} />
-		</Routes>
-		
+		<Menu setTabName={setTabName} />
+		<Tab name={tabName} />
 	</div>
 }
