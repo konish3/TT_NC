@@ -9,6 +9,11 @@ export interface IUser {
 	gender?: string,
 }
 
+export interface IHasCheckbox {
+	hasCheckbox: boolean,
+	isChecked: boolean,
+}
+
 const users: IUser[] = [
 	{ photo: 'img/usersPhoto/1-photo.png', name: 'Кравцова Александра', age: 23, gender: 'Жен' },
 	{ photo: 'img/usersPhoto/2-photo.png', name: 'Рожков Денис', age: 30, gender: 'Муж' },
