@@ -1,13 +1,15 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import '../../scssComponents/leftSide/countUser.scss'
 
-type Props = {
-	setHasCheckbox: Dispatch<SetStateAction<boolean>>
+type PropsCount = {
+	setHasCheckbox: Dispatch<SetStateAction<boolean>>,
+	setChecked: Dispatch<SetStateAction<boolean>>
+	isСhecked: boolean
 }
 
-export const CountUser: React.FC<Props> = ({ setHasCheckbox }) => {
+export const CountUser: React.FC<PropsCount> = ({ setHasCheckbox, setChecked, isСhecked }) => {
 	const [none, setNone] = useState<boolean>(true)
-	const [checked, setChecked] = useState(false)
+	
 
 	const checkedHandler = (e: React.FormEvent<HTMLInputElement>): void => {
 		setChecked(e.currentTarget.checked)
@@ -31,7 +33,7 @@ export const CountUser: React.FC<Props> = ({ setHasCheckbox }) => {
 				<input onChange={(e) => checkedHandler(e)} type="checkbox" />
 				<span>Все</span>
 				<div className="count-users__content_counter count-checkbox">
-					{checked ? 213 : 1}
+					{isСhecked ? 213 : 1}
 				</div>
 			</div>
 			<div className="count-users__content_buttons">
