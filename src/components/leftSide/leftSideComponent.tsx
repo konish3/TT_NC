@@ -11,7 +11,7 @@ export interface IHasCheckbox {
 
 export function LeftSide({ users }: { users: IUser[] }) {
 	
-	const [hasCheckbox, setHasCheckbox] = useState<boolean>(false)
+	const [hasCheckbox, setHasCheckbox] = useState<boolean>(true)
 	
 	return <div className="left-side">
 		<Search />
